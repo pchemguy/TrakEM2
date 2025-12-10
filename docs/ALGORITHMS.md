@@ -28,8 +28,7 @@ High-level descriptions of notable algorithms; details to be refined in future p
   - `ContrastEnhancerWrapper` wraps ImageJ's `ContrastEnhancer`, presenting a dialog to collect parameters then either equalize histograms (via `EqualizeHistogram` filters) or stretch histograms using stack/reference statistics before regenerating mipmaps.
   - During grid/text imports (`Loader.insertGrid`, `Loader.importImages`), homogenization can auto-compute common min/max and me
 an from central 50% of images (sorted by standard deviation), apply the ranges to all patches, then regenerate mipmaps.
-- **Outputs**: Updated per-patch min/max ranges and regenerated mipmaps yielding visually consistent contrast across the select
-ed scope.
+- **Outputs**: Updated per-patch min/max ranges and regenerated mipmaps yielding visually consistent contrast across the selected scope.
 
 ## Scripting Automation Patterns (ini.trakem2.scripting)
 - **Goal**: Provide programmatic access to project operations for batch processing.
