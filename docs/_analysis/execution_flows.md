@@ -29,6 +29,12 @@ Illustrative control flows for key user actions in TrakEM2.
 2. `FSLoader` handles filesystem-based projects; `DBLoader` connects to relational storage. Both manage caches and background IO via `Bureaucrat` workers.
 
 ## Contrast Homogenization
-1. User triggers homogenization via `Loader.enhanceContrast` (layers or patch selection) or enables the option during grid/text imports.
-2. `ContrastEnhancerWrapper` displays configuration (saturation %, normalize/equalize, histogram source) and computes shared statistics (stack, per-image, or reference patch) when stretching histograms.
-3. Wrapper applies equalization filters or histogram stretch per patch, updates min/max, and schedules mipmap regeneration; import workflows optionally pre-compute common min/max from the middle 50% of images sorted by standard deviation before regenerating mipmaps.
+**Manual workflow (via `Loader.enhanceContrast`):**
+1. User triggers homogenization for a selection of layers or patches.
+2. `ContrastEnhancerWrapper` displays a configuration dialog (saturation %, normalize/equalize, histogram source).
+3. The wrapper applies equalization filters or histogram stretch per patch, updates min/max, and schedules mipmap regeneration.
+
+**Automatic workflow (on import):**
+1. User enables the homogenization option during grid/text imports.
+2. The import workflow pre-computes a common min/max from the middle 50% of images (sorted by standard deviation).
+3. The computed range is applied to all patches and mipmaps are regenerated.
