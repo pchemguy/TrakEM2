@@ -21,6 +21,17 @@ High-level descriptions of notable algorithms; details to be refined in future p
 - **Process**: Compute mapping (e.g., `LinearIntensityMap`) and apply to pixel data before alignment/visualization.
 - **Outputs**: Adjusted images improving stitching and visual uniformity.
 
+## Contrast Normalization (ini.trakem2.imaging / Loader)
+- **Goal**: Harmonize contrast across patches or layers to remove seams and prepare data for stitching/import.
+- **Inputs**: Collections of `Patch`/`Layer` objects; user options for saturation percentage, normalization vs. equalization, statistics source (stack, per-image, or reference patch), and whether to reuse existing min/max ranges.
+- **Process**:
+  - `ContrastEnhancerWrapper` wraps ImageJ's `ContrastEnhancer`, presenting a dialog to collect parameters then either equalize histograms (via `EqualizeHistogram` filters) or stretch histograms using stack/reference statistics before regenerating mipmaps.
+  - During grid/text imports (`Loader.insertGrid`, `Loader.importImages`), homogenization can:
+    - Auto-compute a common min/max and mean from the central 50% of images (sorted by standard deviation).
+    - Apply the computed ranges to all patches.
+    - Regenerate mipmaps.
+- **Outputs**: Updated per-patch min/max ranges and regenerated mipmaps yielding visually consistent contrast across the selected scope.
+
 ## Scripting Automation Patterns (ini.trakem2.scripting)
 - **Goal**: Provide programmatic access to project operations for batch processing.
 - **Inputs**: Scripts invoking project/display APIs; optional headless mode settings.

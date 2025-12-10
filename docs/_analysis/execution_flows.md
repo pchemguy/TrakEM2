@@ -27,3 +27,14 @@ Illustrative control flows for key user actions in TrakEM2.
 ## Persistence
 1. Domain objects extend `DBObject` and rely on `Loader` to resolve IDs and serialized XML state.
 2. `FSLoader` handles filesystem-based projects; `DBLoader` connects to relational storage. Both manage caches and background IO via `Bureaucrat` workers.
+
+## Contrast Homogenization
+**Manual workflow (via `Loader.enhanceContrast`):**
+1. User triggers homogenization for a selection of layers or patches.
+2. `ContrastEnhancerWrapper` displays a configuration dialog (saturation %, normalize/equalize, histogram source).
+3. The wrapper applies equalization filters or histogram stretch per patch, updates min/max, and schedules mipmap regeneration.
+
+**Automatic workflow (on import):**
+1. User enables the homogenization option during grid/text imports.
+2. The import workflow pre-computes a common min/max from the middle 50% of images (sorted by standard deviation).
+3. The computed range is applied to all patches and mipmaps are regenerated.

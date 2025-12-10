@@ -24,9 +24,6 @@ This file tracks Stage 1 documentation work for the TrakEM2 repository. Each pha
 - Revisit concurrency in `mpicbg.trakem2.align.concurrent` and `ini.trakem2.parallel`.
 - Fetch GitHub wiki and Fiji javadoc content when accessible; reconcile with current docs and update `LEGACY_REFERENCES.md`/`scratch_notes`.
 - Consider adding diagrams once scope is clearer and tooling is available.
+- Capture further contrast homogenization parameter defaults (ImageJ `ContrastEnhancer` options, loader import heuristics) if more empirical values are needed for Python parity.
 - Existing documentation: `docs/EXTERNAL_SOURCES.md` describing external references to integrate later; no internal architecture docs yet.
 
-## Immediate Next Steps
-1. Begin Phase 1 by enumerating packages/classes to build `docs/_analysis/symbol_map.md`.
-2. Create placeholder documentation files under `docs/` as required by Stage 1 (e.g., ARCHITECTURE, COMPONENTS) and note scopes.
-3. Inspect `src/main/java` packages to identify subsystem boundaries for later phases.
