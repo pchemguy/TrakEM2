@@ -25,3 +25,5 @@ This file tracks Stage 1 documentation work for the TrakEM2 repository. Each pha
 - Fetch GitHub wiki and Fiji javadoc content when accessible; reconcile with current docs and update `LEGACY_REFERENCES.md`/`scratch_notes`.
 - Consider adding diagrams once scope is clearer and tooling is available.
 - Capture further contrast homogenization parameter defaults (ImageJ `ContrastEnhancer` options, loader import heuristics) if more empirical values are needed for Python parity.
+- Existing documentation: `docs/EXTERNAL_SOURCES.md` describing external references to integrate later; no internal architecture docs yet.
+

@@ -22,7 +22,7 @@ Brief descriptions of major components and their responsibilities.
 - **ProjectTree/LayerTree/DNDTree**: Swing trees for browsing and manipulating hierarchy; issue commands back to `Project` and `Display`.
 
 ## Alignment and Transforms
-- **mpicbg.trakem2.align**: alignment workflows (`Align`, `ElasticMontage`, `RegularizedAffineLayerAlignment`), block matching tasks, and tile abstractions.
+- **`mpicbg.trakem2.align`**: alignment workflows (`Align`, `ElasticMontage`, `RegularizedAffineLayerAlignment`), block matching tasks, and tile abstractions.
 - **mpicbg.trakem2.transform + bunwarpj.trakem2.transform**: transform classes (affine/similarity/translation and spline-based) with serialization wrappers.
 
 ## Imaging and Analysis
