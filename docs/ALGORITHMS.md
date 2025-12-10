@@ -23,8 +23,7 @@ High-level descriptions of notable algorithms; details to be refined in future p
 
 ## Contrast Normalization (ini.trakem2.imaging / Loader)
 - **Goal**: Harmonize contrast across patches or layers to remove seams and prepare data for stitching/import.
-- **Inputs**: Collections of `Patch`/`Layer` objects; user options for saturation percentage, normalization vs. equalization, st
-atistics source (stack, per-image, or reference patch), and whether to reuse existing min/max ranges.
+- **Inputs**: Collections of `Patch`/`Layer` objects; user options for saturation percentage, normalization vs. equalization, statistics source (stack, per-image, or reference patch), and whether to reuse existing min/max ranges.
 - **Process**:
   - `ContrastEnhancerWrapper` wraps ImageJ's `ContrastEnhancer`, presenting a dialog to collect parameters then either equalize
  histograms (via `EqualizeHistogram` filters) or stretch histograms using stack/reference statistics before regenerating mipmap
