@@ -36,8 +36,7 @@ Package-level overview and notable classes for TrakEM2. Content generated during
 - **Alignment classes (mpicbg.trakem2.align)**: implement affine/elastic montage workflows, driven by block matching and tile transforms.
 - **Scripting entry points**: allow batch automation, bridging Java core to user-provided scripts.
 - **Lens correction**: specialized image distortion correction pipeline built as plugin-level tool.
-- **Contrast normalization**: `ContrastEnhancerWrapper` encapsulates contrast stretching/equalization options; `Loader` hosts ho
-mogenization hooks during imports and menu actions.
+- **Contrast normalization**: `ContrastEnhancerWrapper` encapsulates contrast stretching/equalization options; `Loader` hosts homogenization hooks during imports and menu actions.
 
 ## Uncertainties / TODO
 
