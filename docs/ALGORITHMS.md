@@ -26,7 +26,10 @@ High-level descriptions of notable algorithms; details to be refined in future p
 - **Inputs**: Collections of `Patch`/`Layer` objects; user options for saturation percentage, normalization vs. equalization, statistics source (stack, per-image, or reference patch), and whether to reuse existing min/max ranges.
 - **Process**:
   - `ContrastEnhancerWrapper` wraps ImageJ's `ContrastEnhancer`, presenting a dialog to collect parameters then either equalize histograms (via `EqualizeHistogram` filters) or stretch histograms using stack/reference statistics before regenerating mipmaps.
-  - During grid/text imports (`Loader.insertGrid`, `Loader.importImages`), homogenization can auto-compute common min/max and mean from central 50% of images (sorted by standard deviation), apply the ranges to all patches, then regenerate mipmaps.
+  - During grid/text imports (`Loader.insertGrid`, `Loader.importImages`), homogenization can:
+    - Auto-compute a common min/max and mean from the central 50% of images (sorted by standard deviation).
+    - Apply the computed ranges to all patches.
+    - Regenerate mipmaps.
 - **Outputs**: Updated per-patch min/max ranges and regenerated mipmaps yielding visually consistent contrast across the selected scope.
 
 ## Scripting Automation Patterns (ini.trakem2.scripting)
