@@ -25,9 +25,7 @@ High-level descriptions of notable algorithms; details to be refined in future p
 - **Goal**: Harmonize contrast across patches or layers to remove seams and prepare data for stitching/import.
 - **Inputs**: Collections of `Patch`/`Layer` objects; user options for saturation percentage, normalization vs. equalization, statistics source (stack, per-image, or reference patch), and whether to reuse existing min/max ranges.
 - **Process**:
-  - `ContrastEnhancerWrapper` wraps ImageJ's `ContrastEnhancer`, presenting a dialog to collect parameters then either equalize
- histograms (via `EqualizeHistogram` filters) or stretch histograms using stack/reference statistics before regenerating mipmap
-s.
+  - `ContrastEnhancerWrapper` wraps ImageJ's `ContrastEnhancer`, presenting a dialog to collect parameters then either equalize histograms (via `EqualizeHistogram` filters) or stretch histograms using stack/reference statistics before regenerating mipmaps.
   - During grid/text imports (`Loader.insertGrid`, `Loader.importImages`), homogenization can auto-compute common min/max and me
 an from central 50% of images (sorted by standard deviation), apply the ranges to all patches, then regenerate mipmaps.
 - **Outputs**: Updated per-patch min/max ranges and regenerated mipmaps yielding visually consistent contrast across the select
