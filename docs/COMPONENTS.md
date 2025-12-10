@@ -27,9 +27,7 @@ Brief descriptions of major components and their responsibilities.
 
 ## Imaging and Analysis
 - **ini.trakem2.imaging**: filters and image operations supporting patch preparation and visualization.
-- **Contrast normalization utilities**: `ContrastEnhancerWrapper` wraps ImageJ's `ContrastEnhancer` to equalize histograms or st
-retch ranges across patches/layers; `Loader` orchestrates homogenization during grid/text imports and exposes menu actions to ap
-ply the wrapper layer-wise or relative to a reference patch.
+- **Contrast normalization utilities**: `ContrastEnhancerWrapper` wraps ImageJ's `ContrastEnhancer` to equalize histograms or stretch ranges across patches/layers; `Loader` orchestrates homogenization during grid/text imports and exposes menu actions to apply the wrapper layer-wise or relative to a reference patch.
 - **mpi.fruitfly.math/registration**: FFT cross-correlation and numerical utilities backing registration and measurement routines.
 - **lenscorrection**: distortion correction workflow and models.
 
