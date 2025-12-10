@@ -37,9 +37,10 @@ priority: high
 notes:
 * Official ImageJ plugin documentation overview.
 * May contain current descriptions of functionality + screenshots.
-  extraction_status: pending
+  extraction_status: done
   summary:
-  (Agent will populate.)
+  - Highlights TrakEM2 as an ImageJ plugin for morphological data mining, 3D modeling, stitching/registration, editing, and annotation.
+  - Mentions integration with the 3D Viewer and provides JVM tuning guidance (prefers G1GC for large datasets).
 
 ---
 
@@ -52,9 +53,9 @@ priority: high
 notes:
 * Multiple pages; requires enumerating wiki subpages.
 * Contains design discussions, usage notes, legacy documentation.
-  extraction_status: pending
+  extraction_status: blocked (404 during retrieval; needs follow-up)
   summary:
-  (Agent will populate.)
+  - Retrieval from raw/wiki endpoints returned 404/HTML placeholders; content not yet integrated.
 
 ---
 
@@ -66,9 +67,9 @@ url: [https://syn.mrc-lmb.cam.ac.uk/acardona/INI-2008-2011/trakem2_manual.html](
 priority: medium
 notes:
 * Outdated but contains architectural insights and original author intent.
-  extraction_status: pending
+  extraction_status: done (overview)
   summary:
-  (Agent will populate.)
+  - Sections cover Introduction, Setup, creating/saving/opening/exporting projects, modeling basics, usage tutorials, plugin extensibility, using TrakEM2 as a framework, and appendix.
 
 ---
 
@@ -98,7 +99,7 @@ type: <type>
 url: <URL>
 priority: <low|medium|high>
 notes:
-- 
+-
 extraction_status: pending
 summary:
 ```
@@ -109,12 +110,13 @@ summary:
 
 AI agents should execute the following:
 
-* [ ] Enumerate all SOURCE blocks
-* [ ] Fetch/extract each URL
-* [ ] Identify mentions of TrakEM2 components or algorithms
-* [ ] Insert structured summaries into LEGACY_REFERENCES.md
-* [ ] Cross-link architecture and component docs
-* [ ] Update extraction_status (pending → done)
-* [ ] Store detailed raw extractions in `docs/_generated/scratch_notes.md`
+* [x] Enumerate all SOURCE blocks
+* [x] Fetch/extract each URL (where reachable)
+* [x] Identify mentions of TrakEM2 components or algorithms
+* [x] Insert structured summaries into LEGACY_REFERENCES.md
+* [x] Cross-link architecture and component docs
+* [x] Update extraction_status (pending → done)
+* [x] Store detailed raw extractions in `docs/_generated/scratch_notes.md`
+* [ ] Follow up on blocked/pending sources (GitHub wiki, Fiji javadoc)
 
 ---
