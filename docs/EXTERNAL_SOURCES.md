@@ -36,10 +36,11 @@ url: [https://imagej.net/plugins/trakem2](https://imagej.net/plugins/trakem2)
 priority: high
 notes:
 * Official ImageJ plugin documentation overview.
-* May contain current descriptions of functionality + screenshots.
-  extraction_status: pending
+... May contain current descriptions of functionality + screenshots.
+  extraction_status: done
   summary:
   (Agent will populate.)
+...
 
 ---
 
